@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class TransforrmTranslate : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float movementSpeed;
     
-
     // Update is called once per frame
     void Update()
-    {if (Input.GetKey(KeyCode.W))
+    {
+        /*if (Input.GetKey(KeyCode.W))
         {
             transform.Translate(0,0,-1);
 
@@ -24,7 +24,18 @@ public class TransforrmTranslate : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(1,0,0);
+        }*/
+
+        if (Input.GetKey(KeyCode.S))
+        {
+            transform.Translate(transform.forward*movementSpeed*Time.deltaTime); 
         }
         
+         if (Input.GetKey(KeyCode.W))
+
+             transform.Translate(-transform.forward*movementSpeed*Time.deltaTime);
+        {
+            
+        }
     }
 }
