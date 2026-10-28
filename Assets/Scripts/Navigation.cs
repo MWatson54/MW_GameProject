@@ -21,24 +21,24 @@ public class Navigation : MonoBehaviour
 
     void BetterMovement()//this script moves GameObjects in RealTime
     {
-         if(Input.GetKey(KeyCode.UpArrow))
+         if(Input.GetKey(KeyCode.W))
         {
             transform.Translate(transform.forward*mySpeed*Time.deltaTime, Space.World);//old way of moving - moves 1 unit per frame 
             Debug.Log("Up Arrow is pressed and the position is " + transform.position);
         }
         
-        if(Input.GetKey(KeyCode.DownArrow))
+        if(Input.GetKey(KeyCode.S))
         {
             transform.Translate((-1)*transform.forward*mySpeed*Time.deltaTime, Space.World);//new way of moving
             Debug.Log("Down Arrow is pressed and the position is " + transform.position);
         }
-           if(Input.GetKey(KeyCode.LeftArrow))
+           if(Input.GetKey(KeyCode.A))
         {
             transform.Translate((-1)*transform.right*mySpeed*Time.deltaTime, Space.World);//old way of moving - moves 1 unit per frame  
             Debug.Log("Left Arrow is pressed and the position is " + transform.position);
         }
         
-        if(Input.GetKey(KeyCode.RightArrow))
+        if(Input.GetKey(KeyCode.D))
         {
             transform.Translate(transform.right*mySpeed*Time.deltaTime, Space.World);//old way of moving - moves 1 unit per frame  
             Debug.Log("Right Arrow is pressed and the position is " + transform.position);
