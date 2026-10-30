@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8093441868237254397}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3590188498055803027}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.0146453455, y: 0.99373406, z: 0.02843857, w: -0.107095}
+  m_LocalRotation: {x: 0.014643701, y: 0.99373376, z: 0.02843737, w: -0.10709858}
   m_LocalPosition: {x: -17.736, y: 0.646, z: 5.389}
   m_LocalScale: {x: 0.21810558, y: 0.21810558, z: 0.21810558}
   m_ConstrainProportionsScale: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf1de5cc10e96854eaef6c1789a79801, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Navigation
-  mySpeed: 1
+  mySpeed: 2
 --- !u!54 &8093441868237254397
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 5609526566770566278}
   - component: {fileID: 5422001052409585636}
   - component: {fileID: 7576123582083979316}
+  - component: {fileID: 6048847686294266976}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -184,13 +185,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7477913878946256948}
   serializedVersion: 2
-  m_LocalRotation: {x: -6.402842e-10, y: 0.9790191, z: 6.548361e-11, w: 0.20376843}
-  m_LocalPosition: {x: 0.34, y: 0.13, z: -0.21}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.17, y: 0.79, z: -0.13}
   m_LocalScale: {x: 2.7505636, y: 2.7505631, z: 2.7505636}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 361245254065665802}
-  m_LocalEulerAnglesHint: {x: 0, y: 156.485, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!20 &5609526566770566278
 Camera:
   m_ObjectHideFlags: 0
@@ -294,3 +295,17 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!114 &6048847686294266976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7477913878946256948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d1a27dee350c164198d130e0401b32d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  mouseSensitivity: 500
+  playerBody: {fileID: 361245254065665802}
