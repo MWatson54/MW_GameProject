@@ -4,11 +4,13 @@ public class SceneManager : MonoBehaviour
 {
 
     public GameObject spawnPosition;
+    public GameObject player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private void Start()
     {
-        
+        player.transform.position = spawnPosition.transform.position;
+        player.GetComponent<PlayerJump>().isGrounded = true; // Reset the isGrounded flag to true
     }
 
     // Update is called once per frame
