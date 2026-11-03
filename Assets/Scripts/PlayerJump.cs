@@ -3,9 +3,10 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    public float jumpForce = 7f;
+    public float vertJumpForce = 7f;
+    public float horJumpForce = 7f;
     private Rigidbody rb;
-    private bool isGrounded = true;
+    public bool isGrounded = true;
 
     void Start()
 
@@ -18,7 +19,8 @@ public class PlayerJump : MonoBehaviour
     {
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            // add the forward force to the vertical
+            rb.AddForce((Vector3.up * vertJumpForce) + (transform.forward * horJumpForce), ForceMode.Impulse);
 
             isGrounded = false;
         }
@@ -30,6 +32,11 @@ public class PlayerJump : MonoBehaviour
         {
             isGrounded = true;
         }
+    }
+
+    public void BedJump()
+    {
+        rb.AddForce((Vector3.up * vertJumpForce), ForceMode.Impulse);
     }
 }
 

@@ -3,8 +3,8 @@ using UnityEngine;
 public class ClickToAnimate : MonoBehaviour
 {
     public Animator animator;
-    public AudioSource AudioSource;
-    public AudioClip AudioClip;
+    // public AudioSource AudioSource;
+    // public AudioClip AudioClip;
 
 
 

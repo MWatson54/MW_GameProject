@@ -22,6 +22,8 @@ public class SceneManager : MonoBehaviour
         {
             Debug.Log("Player entered the trigger zone.");
             other.transform.position = spawnPosition.transform.position;
+
+            other.GetComponent<PlayerJump>().isGrounded = true; // Reset the isGrounded flag to true
         }
     }
 }
