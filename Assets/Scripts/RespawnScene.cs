@@ -1,6 +1,7 @@
+using System;
 using UnityEngine;
 
-public class SceneManager : MonoBehaviour
+public class RespawnScene : MonoBehaviour
 {
 
     public GameObject spawnPosition;
@@ -27,5 +28,10 @@ public class SceneManager : MonoBehaviour
 
             other.GetComponent<PlayerJump>().isGrounded = true; // Reset the isGrounded flag to true
         }
+    }
+
+    internal static void LoadScene(string sceneName)
+    {
+        throw new NotImplementedException();
     }
 }
